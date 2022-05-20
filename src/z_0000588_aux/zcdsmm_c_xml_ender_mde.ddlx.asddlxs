@@ -1,0 +1,26 @@
+@Metadata.layer: #CORE
+@UI: {
+  headerInfo: { typeName: 'Dados aceitáveis validação do endereço',
+                typeNamePlural: 'Dados aceitáveis validações do endereços',
+                title: { type: #STANDARD, label: 'Tag', value: 'Tag' } },
+  presentationVariant: [{ sortOrder: [{ by: 'Tag', direction:  #DESC }] }] }
+annotate entity ZCDSMM_C_XML_ENDER with
+{
+  @UI.facet: [ {
+                  id:              'Tag',
+                  purpose:         #STANDARD,
+                  type:            #IDENTIFICATION_REFERENCE,
+                  label:           'Dados aceitáveis validação do endereço',
+                  position:        10 } ]
+
+  @UI: { identification: [ { position: 10, label: 'Tag' } ],
+         lineItem:       [ { position: 10 } ],
+         selectionField: [ { position: 10 } ] }
+  Tag;
+
+  @UI: { identification: [ { position: 20, label: 'Value' } ],
+         lineItem:       [ { position: 20 } ],
+         selectionField: [ { position: 20 } ] }
+  Valor;
+
+}

@@ -1,0 +1,30 @@
+@Metadata.layer: #CORE
+@UI: {
+  headerInfo: { typeName: 'Conversão de CST PIS/COFINS para ZFM',
+                typeNamePlural: 'Conversões de CST PIS/COFINS para ZFM',
+                title: { type: #STANDARD, label: 'CstNota', value: 'CstNota' } },
+  presentationVariant: [{ sortOrder: [{ by: 'CstNota', direction:  #DESC }] }] }
+  
+annotate view ZCDSMM_C_CST_PISCOF
+    with 
+{
+ @UI.facet: [ { 
+                 id:              'CstNota',
+                 purpose:         #STANDARD,
+                 type:            #IDENTIFICATION_REFERENCE,
+                 label:           'Conversão de CST PIS/COFINS para ZFM',
+                 position:        10 } ]
+                 
+    @UI: { identification: [ { position: 10, label: 'CST Nota' } ],
+        lineItem: [ { position: 10 } ],
+        selectionField: [ { position: 10 } ]
+    }  
+    CstNota;
+    
+    @UI: { identification: [ { position: 20, label: 'CST Iva' } ],
+        lineItem: [ { position: 20 } ],
+        selectionField: [ { position: 20 } ]
+    }      
+    CstIva;    
+    
+}

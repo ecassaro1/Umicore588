@@ -1,0 +1,22 @@
+managed; // implementation in class zbp_cdsmm_i_xml_regra unique;
+
+define behavior for ZCDSMM_I_XML_REGRA //alias <alias_name>
+persistent table ZTMM_XML_REGRA
+lock master
+//authorization master ( instance )
+//etag master <field_name>
+{
+  create;
+  update;
+  delete;
+
+  mapping for ZTMM_XML_REGRA
+  {
+    TagXmlHdr = tag_xml_hdr;
+    TagXmlItem = tag_xml_item;
+    CampoSap = campo_sap;
+    StatusValid = status_valid;
+    Message = message;
+  }
+
+}

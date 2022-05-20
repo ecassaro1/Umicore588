@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_DTEL" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <DD04V>
+    <ROLLNAME>ZE_XML_CAMPO_SAP</ROLLNAME>
+    <DDLANGUAGE>E</DDLANGUAGE>
+    <DOMNAME>ZD_XML_CAMPO_SAP</DOMNAME>
+    <HEADLEN>09</HEADLEN>
+    <SCRLEN1>09</SCRLEN1>
+    <SCRLEN2>09</SCRLEN2>
+    <SCRLEN3>09</SCRLEN3>
+    <DDTEXT>Campo SAP</DDTEXT>
+    <REPTEXT>Campo SAP</REPTEXT>
+    <SCRTEXT_S>Campo SAP</SCRTEXT_S>
+    <SCRTEXT_M>Campo SAP</SCRTEXT_M>
+    <SCRTEXT_L>Campo SAP</SCRTEXT_L>
+    <DTELMASTER>E</DTELMASTER>
+    <REFKIND>D</REFKIND>
+   </DD04V>
+   <I18N_LANGS>
+    <LANGU>P</LANGU>
+   </I18N_LANGS>
+   <DD04_TEXTS>
+    <item>
+     <DDLANGUAGE>P</DDLANGUAGE>
+     <DDTEXT>Campo SAP</DDTEXT>
+     <REPTEXT>Campo SAP</REPTEXT>
+     <SCRTEXT_S>Campo SAP</SCRTEXT_S>
+     <SCRTEXT_M>Campo SAP</SCRTEXT_M>
+     <SCRTEXT_L>Campo SAP</SCRTEXT_L>
+    </item>
+   </DD04_TEXTS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

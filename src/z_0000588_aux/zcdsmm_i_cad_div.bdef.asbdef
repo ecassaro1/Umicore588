@@ -1,0 +1,22 @@
+managed; // implementation in class zbp_cdsmm_i_cad_div unique;
+
+define behavior for ZCDSMM_I_CAD_DIV //alias <alias_name>
+persistent table ztmm_cad_div
+lock master
+//authorization master ( instance )
+//etag master <field_name>
+{
+  create;
+  update;
+  delete;
+  mapping for ztmm_cad_div
+  {
+    CodDiv = cod_div;
+    NomeDiv = nome_div;
+    IndBloq = ind_bloq;
+    IndDivPed = ind_div_ped;
+    IndDivNfe = ind_div_nfe;
+    IndDivRec = ind_div_rec;
+  }
+    field ( readonly : update ) CodDiv;
+}

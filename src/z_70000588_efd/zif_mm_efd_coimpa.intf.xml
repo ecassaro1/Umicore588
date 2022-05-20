@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_INTF" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <VSEOINTERF>
+    <CLSNAME>ZIF_MM_EFD_COIMPA</CLSNAME>
+    <LANGU>P</LANGU>
+    <DESCRIPT>Coimpa EFD</DESCRIPT>
+    <EXPOSURE>2</EXPOSURE>
+    <STATE>1</STATE>
+    <UNICODE>X</UNICODE>
+   </VSEOINTERF>
+   <DESCRIPTIONS>
+    <SEOCOMPOTX>
+     <CLSNAME>ZIF_MM_EFD_COIMPA</CLSNAME>
+     <CMPNAME>WRITE_NF</CMPNAME>
+     <LANGU>P</LANGU>
+     <DESCRIPT>Write Nota Fscal</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZIF_MM_EFD_COIMPA</CLSNAME>
+     <CMPNAME>_CHECK_NF_DONE</CMPNAME>
+     <LANGU>P</LANGU>
+     <DESCRIPT>Check Nota Fiscal already done</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZIF_MM_EFD_COIMPA</CLSNAME>
+     <CMPNAME>_CHECK_OTHER_ENTRIES</CMPNAME>
+     <LANGU>P</LANGU>
+     <DESCRIPT>Check Other Entries</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZIF_MM_EFD_COIMPA</CLSNAME>
+     <CMPNAME>_CHECK_PO</CMPNAME>
+     <LANGU>P</LANGU>
+     <DESCRIPT>Check Purchase order</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZIF_MM_EFD_COIMPA</CLSNAME>
+     <CMPNAME>_FILL_BAPI_DATA</CMPNAME>
+     <LANGU>P</LANGU>
+     <DESCRIPT>Fill all BAPI information</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZIF_MM_EFD_COIMPA</CLSNAME>
+     <CMPNAME>_FILL_NFE_UPDATE_ACTIVE</CMPNAME>
+     <LANGU>P</LANGU>
+     <DESCRIPT>Update NFE</DESCRIPT>
+    </SEOCOMPOTX>
+    <SEOCOMPOTX>
+     <CLSNAME>ZIF_MM_EFD_COIMPA</CLSNAME>
+     <CMPNAME>_MESSAGE_TEXT_BUILD</CMPNAME>
+     <LANGU>P</LANGU>
+     <DESCRIPT>Mouting messages</DESCRIPT>
+    </SEOCOMPOTX>
+   </DESCRIPTIONS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

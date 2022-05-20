@@ -1,0 +1,17 @@
+managed; // implementation in class zbp_cdsmm_i_xml_ender unique;
+
+define behavior for ZCDSMM_I_XML_ENDER //alias <alias_name>
+persistent table ztmm_xml_ender
+lock master
+//authorization master ( instance )
+//etag master <field_name>
+{
+  create;
+  update;
+  delete;
+  mapping for ztmm_xml_ender
+  {
+    Tag = tag;
+    Valor = valor;
+  }
+}

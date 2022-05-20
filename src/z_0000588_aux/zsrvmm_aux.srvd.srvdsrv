@@ -1,0 +1,9 @@
+@EndUserText.label: 'NFe XML Validation Auxiliary Entities'
+define service ZSRVMM_AUX {
+  expose ZCDSMM_C_CAD_OBS as CadObs;
+  expose ZCDSMM_C_XML_REGRA as XmlRegra;
+  expose ZCDSMM_C_XML_R_CFOP as XmlRcfop;
+  expose ZCDSMM_C_CST_PISCOF as CstPiscof;
+  expose ZCDSMM_C_CAD_DIV as CadDiv;
+  expose ZCDSMM_C_XML_ENDER as XmlEnder;
+}

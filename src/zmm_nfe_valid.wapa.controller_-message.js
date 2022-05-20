@@ -1,0 +1,2 @@
+sap.ui.define([],function(){"use strict";function e(e){if(!e._oMessageDialog){e._oMessageDialog=sap.ui.xmlfragment("umicore.mm.nfevalid.zmmnfevalid.view.MessagePopup",e);e.getView().addDependent(e._oMessageDialog)}return e._oMessageDialog}var o={popUp:fu+
+nction(o){e(o).open()},close:function(e){e._oMessageDialog.close()}};return o});                                                                                                                                                                               

@@ -1,0 +1,47 @@
+@Metadata.layer: #CORE
+@UI: {
+  headerInfo: { typeName: 'Cadastro de Regra para CFOP',
+                typeNamePlural: 'Cadastros de Regras para CFOP',
+                title: { type: #STANDARD, label: 'Cfop', value: 'Cfop' } },
+  presentationVariant: [{ sortOrder: [{ by: 'Cfop', direction:  #DESC }] }] }
+annotate view ZCDSMM_C_XML_R_CFOP
+    with 
+{
+ @UI.facet: [ { 
+                 id:              'Cfop',
+                 purpose:         #STANDARD,
+                 type:            #IDENTIFICATION_REFERENCE,
+                 label:           'Cadastro de Regra para CFOP',
+                 position:        10 } ]
+                 
+    @UI: { identification: [ { position: 10, label: 'Cfop' } ],
+        lineItem: [ { position: 10 } ],
+        selectionField: [ { position: 10 } ]
+    }  
+    Cfop;
+    
+    @UI: { identification: [ { position: 20, label: 'ICMS Desonerado' } ],
+        lineItem: [ { position: 20 } ],
+        selectionField: [ { position: 20 } ]
+    }      
+    IcmsDesonerado;
+    
+    @UI: { identification: [ { position: 30, label: 'Origem Material' } ],
+        lineItem: [ { position: 30 } ],
+        selectionField: [ { position: 30 } ]
+    }      
+    OrigMaterial;
+    
+    @UI: { identification: [ { position: 40, label: 'Utilização Material' } ],
+        lineItem: [ { position: 40 } ],
+        selectionField: [ { position: 40 } ]
+    }      
+    UtilMaterial;
+    
+    @UI: { identification: [ { position: 50, label: 'Código IVA' } ],
+        lineItem: [ { position: 50 } ],
+        selectionField: [ { position: 50 } ]
+    }      
+    CodIva;
+    
+}

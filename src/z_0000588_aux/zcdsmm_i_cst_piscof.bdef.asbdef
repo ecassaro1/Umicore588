@@ -1,0 +1,18 @@
+managed; // implementation in class zbp_cdsmm_i_cst_piscof unique;
+
+define behavior for ZCDSMM_I_CST_PISCOF //alias <alias_name>
+persistent table ztmm_cst_piscof
+lock master
+//authorization master ( instance )
+//etag master <field_name>
+{
+  create;
+  delete;
+
+  mapping for ztmm_cst_piscof
+  {
+    CstNota = cst_nota;
+    CstIva  = cst_iva;
+  }
+    field ( readonly : update ) CstNota,CstIva;
+}

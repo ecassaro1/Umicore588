@@ -1,0 +1,264 @@
+managed implementation in class zbp_cdsmm_i_xml_hist_hd unique;
+
+define behavior for ZCDSMM_I_XML_HIST_HD alias xml_hd
+persistent table ztmm_xml_hist_hd
+lock master
+//authorization master ( instance )
+//etag master <field_name>
+{
+  field ( mandatory : create ) Chave;
+  field ( readonly : update ) Chave, Divergencias;
+
+  create;
+  update;
+  delete;
+
+  determination Fill on modify { create; }
+
+  action Validate;
+  action File parameter ZCDSMM_A_STATUS_CHANGE_PARAMS;
+  action Div parameter ZCDSMM_A_STATUS_CHANGE_PARAMS;
+  action PinChange parameter ZCDSMM_A_PIN_CHNG_PARAMS;
+  action ActReqChange parameter ZCDSMM_A_ACTREQ_CHNG_PARAMS;
+  action ObsHSend parameter ZCDSMM_A_OBS;
+  action StatusChange parameter ZCDSMM_A_STATUS_CHANGE_PARAMS;
+  action NfWrite parameter ZCDSMM_A_NFE_WRITE_DOCNUM;
+
+  association _Items { create; }
+  association _Cods { create; }
+  association _ObsH { create; }
+  association _LogH { create; }
+
+
+  mapping for ztmm_xml_hist_hd
+  {
+    Chave = chave;
+    StatusValid = status_valid;
+    FileRaw = file_raw;
+    XmlStr = xml_str;
+    RefXmlStr = ref_xml_str;
+    Credat = credat;
+    Aezet = aezet;
+    Aenam = aenam;
+    Archive = archive;
+    Status = status;
+    Cnpj = cnpj;
+    Pin = pin;
+    ActionRequired = action_required;
+    NfWriteDocnum = nf_write_docnum;
+  }
+}
+
+define behavior for ZCDSMM_I_XML_HIST_IT alias xml_it
+persistent table ztmm_xml_hist_it
+lock dependent by _Header
+//authorization dependent by <association>
+//etag master <field_name>
+{
+  field ( mandatory : create ) Chave, Id;
+  field ( readonly : update ) Chave, Id;
+
+  update;
+  delete;
+
+  internal action ValidateItem result [1] $self;
+  action XPedChange parameter ZCDSMM_A_XPED_CHANGE_PARAMS;
+  action NItemPedChange parameter ZCDSMM_A_NITEMPED_CHNG_PARAMS;
+  action ObsSend parameter ZCDSMM_A_OBS;
+
+  association _Header;
+  association _Errors { create; }
+  association _Log { create; }
+  association _Obs { create; }
+
+  mapping for ztmm_xml_hist_it
+  {
+    Chave = chave;
+    Id = id;
+    StatusValid = status_valid;
+    Status = status;
+    XPed = x_ped;
+    NItemPed = n_item_ped;
+  }
+}
+
+define behavior for zcdsmm_i_xml_hd_cod alias xml_cod
+persistent table ztmm_xml_hd_cod
+lock dependent by _Header
+//authorization dependent by <association>
+//etag master <field_name>
+{
+  field ( mandatory : create ) Chave, CodDiv;
+  field ( readonly : update ) Chave, CodDiv;
+
+  update;
+  delete;
+
+  //  action ValidateItem;
+  //  action StatusChange parameter ZCDSMM_A_STATUS_CHANGE_PARAMS;
+
+  association _Header;
+
+  mapping for ztmm_xml_hd_cod
+  {
+    Chave = chave;
+    CodDiv = cod_div;
+  }
+}
+
+define behavior for ZCDSMM_I_LOG_ERROS alias errors
+persistent table ztmm_log_erros
+lock dependent by _Header
+//authorization dependent by <association>
+//etag master <field_name>
+{
+  field ( mandatory : create ) Chave, Id, Seq;
+  field ( readonly : update ) Chave, Id, Seq;
+
+  update;
+  delete;
+
+  association _Header;
+
+  mapping for ztmm_log_erros
+  {
+    Chave = chave;
+    Id = id;
+    Seq = seq;
+    StatusValid = status_valid;
+    TagXmlHdr = tag_xml_hdr;
+    TagXmlItem = tag_xml_item;
+    NNf = n_nf;
+    ItemXml = item_xml;
+    Pedido = pedido;
+    ItemPedido = item_pedido;
+    ValorXml = valor_xml;
+    ValorSap = valor_sap;
+    Texto = texto;
+    Inactive = inactive;
+  }
+}
+
+define behavior for ZCDSMM_I_XML_LOG alias log
+persistent table ztmm_xml_log
+lock dependent by _Header
+//authorization dependent by <association>
+//etag master <field_name>
+{
+  field ( mandatory : create ) Chave, Id, Seq;
+  field ( readonly : update ) Chave, Id, Seq;
+
+  //always added, never changed
+  //update;
+  //delete;
+
+  mapping for ztmm_xml_log
+  {
+    Chave = chave;
+    Id = id;
+    Seq = seq;
+    TagXmlHdr = tag_xml_hdr;
+    TagXmlItem = tag_xml_item;
+    Aedat = aedat;
+    Aezet = aezet;
+    Aenam = aenam;
+    CampoSap = campo_sap;
+    StatusValid = status_valid;
+    XPed = x_ped;
+    NItemPed = n_item_ped;
+    Oldvalue = oldvalue;
+    Newvalue = newvalue;
+    TagXmlValor = tag_xml_valor;
+    Message = message;
+  }
+
+  association _Header;
+}
+
+
+define behavior for ZCDSMM_I_XML_LOGH alias logH
+persistent table ztmm_xml_log
+lock dependent by _Header
+//authorization dependent by <association>
+//etag master <field_name>
+{
+  field ( mandatory : create ) Chave, Seq;
+  field ( readonly : update ) Chave, Seq;
+
+  //always added, never changed
+  //update;
+  //delete;
+
+  mapping for ztmm_xml_log
+  {
+    Chave = chave;
+    Seq = seq;
+    TagXmlHdr = tag_xml_hdr;
+    TagXmlItem = tag_xml_item;
+    Aedat = aedat;
+    Aezet = aezet;
+    Aenam = aenam;
+    CampoSap = campo_sap;
+    StatusValid = status_valid;
+    XPed = x_ped;
+    NItemPed = n_item_ped;
+    Oldvalue = oldvalue;
+    Newvalue = newvalue;
+    TagXmlValor = tag_xml_valor;
+    Message = message;
+  }
+
+  association _Header;
+}
+
+
+define behavior for ZCDSMM_I_XML_OBS alias obs
+persistent table ztmm_xml_obs
+lock dependent by _Header
+//authorization dependent by <association>
+//etag master <field_name>
+{
+  field ( mandatory : create ) Chave, Id, Aedat, Aezet;
+  field ( readonly : update ) Chave, Id, Aedat, Aezet;
+
+  //always added, never changed
+  //update;
+  //delete;
+
+  mapping for ztmm_xml_obs
+  {
+    Chave = chave;
+    Id = id;
+    Aedat = aedat;
+    Aezet = aezet;
+    Aenam = aenam;
+    Message = message;
+  }
+
+  association _Header;
+}
+
+define behavior for ZCDSMM_I_XML_OBSH alias obsh
+persistent table ztmm_xml_obsh
+lock dependent by _Header
+//authorization dependent by <association>
+//etag master <field_name>
+{
+  field ( mandatory : create ) Chave, Aedat, Aezet;
+  field ( readonly : update ) Chave, Aedat, Aezet;
+
+  //always added, never changed
+  //update;
+  //delete;
+
+  mapping for ztmm_xml_obsh
+  {
+    Chave = chave;
+    Aedat = aedat;
+    Aezet = aezet;
+    Aenam = aenam;
+    Message = message;
+  }
+
+  association _Header;
+}

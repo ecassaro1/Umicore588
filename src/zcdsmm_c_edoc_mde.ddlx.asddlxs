@@ -1,0 +1,106 @@
+@Metadata.layer: #CORE
+annotate entity ZCDSMM_C_EDOC with
+{
+
+  @UI: {
+    selectionField: [ { position: 5 } ]
+  }
+    //@Consumption.filter.defaultValue: 'BR05'
+  CompanyCode;
+
+  @UI: {
+    lineItem: [ { position: 5 } ],
+    selectionField: [ { position: 35 } ]
+  }
+  @Consumption.valueHelpDefinition:
+  [
+    {
+        entity.name:    'ZCDSMM_I_StatusValid_VH',
+        entity.element: 'StatusValid'
+    }
+  ]
+  StatusValid;
+
+
+  @UI: {
+    selectionField: [ { position: 37 } ]
+  }
+  @Consumption.valueHelpDefinition:
+  [
+    {
+        entity.name:    'ZCDSMM_I_STATUSCTRL_VH',
+        entity.element: 'Status'
+    }
+  ]
+  Status;
+
+  @UI: {
+    lineItem: [ { position: 10 } ],
+    selectionField: [ { position: 10 } ]
+  }
+  Accesskey;
+
+  @UI: {
+    lineItem: [ { position: 20 } ],
+    selectionField: [ { position: 130 } ]
+  }
+  Nfenum;
+
+  @UI.lineItem: [ { position: 27 } ]
+  InfnfeIdeTpnf;
+
+  @UI.lineItem: [ { position: 24 } ]
+  InfnfeIdeFinnfe;
+
+  @UI: {
+    lineItem: [ { position: 40 } ],
+    selectionField: [ { position: 20 } ]
+  }
+  InfnfeEmitCnpj;
+
+  @UI: {
+    lineItem: [ { position: 45 } ],
+    selectionField: [ { position: 25 } ]  //but it´s virtual and therefore cannot be used as filter
+  }
+  InfnfeDestCnpj;
+
+  @UI: {
+    selectionField: [ { position: 30 } ] //same as above
+  }
+  CreateDate;
+
+/*
+  @UI: {
+    lineItem: [ { position: 60 } ],
+    selectionField: [ { position: 60 } ]  //but it´s virtual and therefore cannot be used as filter
+  }
+  EkkoUser;
+*/
+
+  @UI: {
+    selectionField: [ { position: 110 } ]
+  }
+  @Consumption.valueHelpDefinition:
+    [
+      {
+          entity.name:    'ZCDSMM_I_Pin_VH',
+//          entity.element: 'StatusValid'
+          entity.element: 'Pin'
+      }
+    ]
+  Pin;
+
+  @UI: { 
+    //identification: [ { position: 120, label: 'Required Action' } ],
+    selectionField: [ { position: 120 } ],
+    lineItem:       [ { position: 120 } ]
+  }
+  @Consumption.valueHelpDefinition:
+    [
+      {
+          entity.name:    'ZCDSMM_I_ActionRequired_VH',
+          entity.element: 'ActionRequired'
+      }
+    ]
+  ActionRequired;
+}

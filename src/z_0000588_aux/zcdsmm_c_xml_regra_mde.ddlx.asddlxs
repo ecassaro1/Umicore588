@@ -1,0 +1,45 @@
+@Metadata.layer: #CORE
+@UI: {
+  headerInfo: { typeName: 'Cadastro de Regras de Validação',
+                typeNamePlural: 'Cadastros de Regras de Validação',
+                title: { type: #STANDARD, label: 'TagXmlHdr', value: 'TagXmlHdr' } },
+  presentationVariant: [{ sortOrder: [{ by: 'TagXmlHdr', direction:  #DESC }] }] }
+  
+annotate view ZCDSMM_C_XML_REGRA
+    with 
+{
+ @UI.facet: [ { 
+                 id:              'TagXmlHdr',
+                 purpose:         #STANDARD,
+                 type:            #IDENTIFICATION_REFERENCE,
+                 label:           'Cadastro de Regras de Validação',
+                 position:        10 } ]
+                 
+    @UI: { identification: [ { position: 10, label: 'Tag XML Header' } ],
+        lineItem: [ { position: 10 } ],
+        selectionField: [ { position: 10 } ]
+    }  
+    TagXmlHdr;
+    
+    @UI: { identification: [ { position: 20, label: 'Tag XML Item' } ],
+        lineItem: [ { position: 20 } ],
+        selectionField: [ { position: 20 } ]
+    }
+    TagXmlItem;         
+     
+    @UI: { identification: [ { position: 30, label: 'Campo SAP' } ],
+        lineItem: [ { position: 30 } ]
+    } 
+    CampoSap;
+    
+    @UI: { identification: [ { position: 40, label: 'Status de validação' } ],
+        lineItem: [ { position: 40 } ]
+    }     
+    StatusValid;
+    
+    @UI: { identification: [ { position: 50, label: 'Mensagem' } ],
+        lineItem: [ { position: 50 } ]
+    }     
+    Message;
+    
+}

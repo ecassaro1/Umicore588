@@ -1,0 +1,33 @@
+@Metadata.layer: #CORE
+@UI: {
+  headerInfo: { typeName: 'Observação para Liberação/Rejeição',
+                typeNamePlural: 'Observações para Liberação/Rejeição',
+                title: { type: #STANDARD, label: 'Status', value: 'Status' } },
+  presentationVariant: [{ sortOrder: [{ by: 'Status', direction:  #DESC }] }] }
+  
+annotate entity ZCDSMM_C_CAD_OBS
+    with 
+{
+
+ @UI.facet: [ { 
+                 id:              'Status',
+                 purpose:         #STANDARD,
+                 type:            #IDENTIFICATION_REFERENCE,
+                 label:           'Observação para Liberação/Rejeição',
+                 position:        10 } ]
+                 
+ @UI: { identification: [ { position: 10, label: 'Status' } ],
+        lineItem:       [ { position: 10 } ],
+        selectionField: [ { position: 10 } ] }
+    Status;
+    
+ @UI: { identification: [ { position: 20, label: 'Sequence' } ],
+        lineItem:       [ { position: 20 } ],
+        selectionField: [ { position: 20 } ] }
+    Seq;
+    
+    @UI: { identification: [ { position: 30, label: 'Obervação do usuário' } ],
+        lineItem: [ { position: 30 } ]
+    }      
+    TxtNote;    
+}

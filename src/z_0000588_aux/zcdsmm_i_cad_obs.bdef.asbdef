@@ -1,0 +1,20 @@
+managed; // implementation in class zbp_cdsmm_i_cad_obs unique;
+
+define behavior for ZCDSMM_I_CAD_OBS //alias <alias_name>
+persistent table ztmm_cad_obs
+lock master
+//authorization master ( instance )
+//etag master <field_name>
+{
+  create;
+  update;
+  delete;
+
+  mapping for ztmm_cad_obs
+  {
+    Status = status;
+    Seq = seq;
+    TxtNote = txt_note;
+  }
+  field ( readonly : update ) Status, Seq;
+}

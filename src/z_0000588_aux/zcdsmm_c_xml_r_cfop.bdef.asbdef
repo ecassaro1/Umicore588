@@ -1,0 +1,7 @@
+projection;
+
+define behavior for ZCDSMM_C_XML_R_CFOP //alias <alias_name>
+{
+  use create;
+  use delete;
+}

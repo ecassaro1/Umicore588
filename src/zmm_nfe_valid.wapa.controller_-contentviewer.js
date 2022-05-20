@@ -1,0 +1,3 @@
+sap.ui.define([],function(){"use strict";function e(e,n){var t="",i="";n=n||"\t";e.split(/>\s*</).forEach(function(e){if(e.match(/^\/\w/))i=i.substring(n.length);t+=i+"<"+e+">\r\n";if(e.match(/^<?\w[^>]*[^\/]$/))i+=n});return t.substring(1,t.length-3)}fu+
+nction n(e){if(!e._oContentViewer){e._oContentViewer=sap.ui.xmlfragment("umicore.mm.nfevalid.zmmnfevalid.view.ContentViewer",e);e.getView().addDependent(e._oContentViewer)}return e._oContentViewer}function t(n,t){var i=n.getGlobalModel();var o=i.getData(+
+);var r=e(t);o.xml=r;i.setData(o)}var i={popUp:function(e,i){n(e).open();t(e,i)},close:function(e){e._oContentViewer.close()}};return i});                                                                                                                     

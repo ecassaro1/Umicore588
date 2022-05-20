@@ -1,0 +1,1 @@
+sap.ui.define(["umicoremm.nfe_valid./zmm_nfe_valid/controller/List.controller"],function(t){"use strict";QUnit.module("List Controller");QUnit.test("I should test the List controller",function(n){var e=new t;e.onInit();n.ok(e)})});                        

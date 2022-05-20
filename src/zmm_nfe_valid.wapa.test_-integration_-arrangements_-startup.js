@@ -1,0 +1,2 @@
+sap.ui.define(["sap/ui/test/Opa5"],function(t){"use strict";return t.extend("umicore.mm.nfevalid.zmmnfevalid.test.integration.arrangements.Startup",{iStartMyApp:function(t){var a=t||{};a.delay=a.delay||50;this.iStartMyUIComponent({componentConfig:{name:"+
+umicore.mm.nfevalid.zmmnfevalid",async:true},hash:a.hash,autoWait:a.autoWait})}})});                                                                                                                                                                           

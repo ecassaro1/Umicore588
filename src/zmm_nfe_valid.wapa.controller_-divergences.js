@@ -1,0 +1,2 @@
+sap.ui.define([],function(){"use strict";function e(e){if(!e._oDivergencesDialog){e._oDivergencesDialog=sap.ui.xmlfragment("umicore.mm.nfevalid.zmmnfevalid.view.DivergencesPopup",e);e.getView().addDependent(e._oDivergencesDialog)}return e._oDivergencesDi+
+alog}var i={popUp:function(i){e(i).open();var n=sap.ui.getCore().byId("cadDivList");n.removeSelections()},close:function(e){if(e._oDivergencesDialog){e._oDivergencesDialog.close()}}};return i});                                                             

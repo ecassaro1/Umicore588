@@ -1,0 +1,1 @@
+sap.ui.define(["umicore/mm/nfevalid/zmmnfevalid/controller/Base.controller"],function(e){"use strict";return e.extend("umicore.mm.nfevalid.zmmnfevalid.controller.App",{onInit:function(){}})});                                                               

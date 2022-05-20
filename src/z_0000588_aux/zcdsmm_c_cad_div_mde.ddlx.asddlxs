@@ -1,0 +1,47 @@
+@Metadata.layer: #CORE
+@UI: {
+  headerInfo: { typeName: 'Divergencie (NFe Validation)',
+                typeNamePlural: 'Divergencies (NFe Validation)',
+                title: { type: #STANDARD, label: 'CodDiv', value: 'CodDiv' } },
+  presentationVariant: [{ sortOrder: [{ by: 'CodDiv', direction:  #DESC }] }] }
+annotate entity ZCDSMM_C_CAD_DIV with
+{
+  @UI.facet: [ {
+                  id:              'CodDiv',
+                  purpose:         #STANDARD,
+                  type:            #IDENTIFICATION_REFERENCE,
+                  label:           'Divergencie (NFe Validation)',
+                  position:        10 } ]
+
+  @UI: { identification: [ { position: 10, label: 'Código Divergência' } ],
+      lineItem: [ { position: 10 } ],
+      selectionField: [ { position: 10 } ]
+  }
+  CodDiv;
+
+  @UI: { identification: [ { position: 20, label: 'Descrição Divergência' } ],
+      lineItem: [ { position: 20 } ]
+          }
+  NomeDiv;
+
+  @UI: { identification: [ { position: 30, label: 'Indicador de Bloqueio' } ],
+      lineItem: [ { position: 30 } ]
+          }
+  IndBloq;
+
+  @UI: { identification: [ { position: 40, label: 'Indicador Divergência Pedido' } ],
+      lineItem: [ { position: 40 } ]
+          }
+  IndDivPed;
+
+  @UI: { identification: [ { position: 50, label: 'Indicador Divergência NFE' } ],
+      lineItem: [ { position: 50 } ]
+          }
+  IndDivNfe;
+
+  @UI: { identification: [ { position: 60, label: 'Indicador Motivo Recebimento' } ],
+      lineItem: [ { position: 60 } ]
+          }
+  IndDivRec;
+
+}

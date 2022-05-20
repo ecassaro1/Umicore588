@@ -1,0 +1,30 @@
+@EndUserText.label: 'XML Validation Main Service'
+define service ZSRVMM_XML {
+  expose ZCDSMM_C_EDOC as eDoc;
+  expose ZCDSMM_C_EDOC_IT as eDocIt;
+  expose ZCDSMM_C_XML as XML;
+  expose ZCDSMM_C_XML_IT as XML_It;
+  expose ZCDSMM_C_XML_HD_COD as XML_Cod;
+  expose ZCDSMM_C_XML_LOG as XML_Log;
+  expose ZCDSMM_C_XML_LOGH as XML_LogH;
+  expose ZCDSMM_C_XML_LOGH_LAST as LastLogH;
+  expose ZCDSMM_C_XML_OBS as XML_Obs;
+  expose ZCDSMM_C_XML_OBSH as XML_ObsH;
+  expose ZCDSMM_C_LOG_ERROS as Errors;
+  expose ZCDSMM_C_XML_LOG_LAST as LastLog;
+  expose ZCDSMM_C_USER as User;
+  expose ZCDSMM_I_EDOC as eDocRel;
+  expose ZCDSMM_I_EDOC_IT as eDocItRel;
+  expose zcdsmm_i_xml_hd_cod as XmlCodsRel;
+  expose ZCDSMM_I_XML_HIST_HD as XmlRel;
+  expose ZCDSMM_I_XML_HIST_IT as ItemRel;
+  expose ZCDSMM_I_XML_LOG as XmlLogRel;
+  expose ZCDSMM_I_XML_LOGH as XmlLogHRel;
+  expose ZCDSMM_I_XML_OBS as XmlObsRel;
+  expose ZCDSMM_I_XML_OBSH as XmlObsHRel;
+  expose ZCDSMM_I_LOG_ERROS as ErrorsRel;
+  expose ZCDSMM_I_XML_LOG_LAST as LastLogRel;
+  expose ZCDSMM_I_XML_LOGH_LAST as LastLogHRel;
+  expose ZCDSMM_C_EDOC_XLS1 as eDocXls1;
+  expose ZCDSMM_C_EDOC_IT_XLS1 as eDocItXls1;
+}

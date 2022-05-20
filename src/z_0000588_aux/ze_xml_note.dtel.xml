@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_DTEL" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <DD04V>
+    <ROLLNAME>ZE_XML_NOTE</ROLLNAME>
+    <DDLANGUAGE>E</DDLANGUAGE>
+    <DOMNAME>ZD_XML_NOTE</DOMNAME>
+    <HEADLEN>33</HEADLEN>
+    <SCRLEN1>10</SCRLEN1>
+    <SCRLEN2>15</SCRLEN2>
+    <SCRLEN3>33</SCRLEN3>
+    <DDTEXT>Observação informada pelo usuário</DDTEXT>
+    <REPTEXT>Observação informada pelo usuário</REPTEXT>
+    <SCRTEXT_S>ObsInfUsu.</SCRTEXT_S>
+    <SCRTEXT_M>Obs.Inf.Usuário</SCRTEXT_M>
+    <SCRTEXT_L>Observação informada pelo usuário</SCRTEXT_L>
+    <DTELMASTER>E</DTELMASTER>
+    <REFKIND>D</REFKIND>
+   </DD04V>
+   <I18N_LANGS>
+    <LANGU>P</LANGU>
+   </I18N_LANGS>
+   <DD04_TEXTS>
+    <item>
+     <DDLANGUAGE>P</DDLANGUAGE>
+     <DDTEXT>Observação informada pelo usuário</DDTEXT>
+     <REPTEXT>Observação informada pelo usuário</REPTEXT>
+     <SCRTEXT_S>ObsInfUsu.</SCRTEXT_S>
+     <SCRTEXT_M>Obs.Inf.Usuário</SCRTEXT_M>
+     <SCRTEXT_L>Observação informada pelo usuário</SCRTEXT_L>
+    </item>
+   </DD04_TEXTS>
+  </asx:values>
+ </asx:abap>
+</abapGit>

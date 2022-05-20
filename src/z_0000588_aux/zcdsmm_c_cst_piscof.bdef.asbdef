@@ -1,0 +1,7 @@
+projection;
+
+define behavior for ZCDSMM_C_CST_PISCOF //alias <alias_name>
+{
+  use create;
+  use delete;
+}

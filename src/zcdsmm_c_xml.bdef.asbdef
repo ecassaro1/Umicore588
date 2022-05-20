@@ -1,0 +1,29 @@
+projection;
+
+define behavior for ZCDSMM_C_XML alias xml_hd
+{
+  use create;
+  use update;
+  use delete;
+
+  use action Validate as ValidateAction;
+  use action File as FileAction;
+  use action Div as DivAction;
+  use action PinChange as PinChangeAction;
+  use action ActReqChange as ActReqChangeAction;
+  use action ObsHSend as ObsHSendAction;
+  use action StatusChange as StatusChangeAction;
+  use action NfWrite as NfWriteAction;
+}
+
+define behavior for ZCDSMM_C_XML_IT alias xml_it
+{
+  use update;
+  use delete;
+
+  use association _Header;
+  //use action ValidateItem as ValidateItemAction;
+  use action XPedChange as XPedChangeAction;
+  use action NItemPedChange as NItemPedChangeAction;
+  use action ObsSend as ObsSendAction;
+}

@@ -1,0 +1,23 @@
+managed implementation in class zbp_cdsmm_i_xml_r_cfop unique;
+
+define behavior for ZCDSMM_I_XML_R_CFOP alias XML_R_CFOP
+persistent table ztmm_xml_r_cfop
+lock master
+{
+  create;
+  delete;
+
+  // validation validateFields on save { field Cfop, IcmsDesonerado, OrigMaterial, UtilMaterial, CodIva; }
+  validation validateFields on save { field Cfop, UtilMaterial, CodIva; }
+
+
+  mapping for ZTMM_XML_R_CFOP
+  {
+    Cfop = cfop;
+    IcmsDesonerado = icms_desonerado;
+    OrigMaterial = matorg;
+    UtilMaterial = matuse;
+    CodIva = mwskz;
+  }
+
+}
